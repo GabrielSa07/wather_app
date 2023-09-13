@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Clima</title>
+</head>
+<body>
+    <main>
+        <div id="box">
+            <label for="search">Pesquisa:</label>
+            <input type="text" id="search" placeholder="Digite o nome aqui...">
+            <button id="buttonSearch"> <!--<img src="https://cdn-icons-png.flaticon.com/512/64/64673.png" alt="imagem de lupa" id="img-lupa"> --></button>
+            <br>
+
+            <span id="nameCity"></span>
+            <span id="flagCountry"></span> 
+            <br>
+
+            <label for="temp">Temperatura:</label>
+            <span id="temp"></span>
+            <br>
+
+            <label for="tempMax">Máxima:</label>
+            <span id="tempMax"></span>
+
+            <label for="tempMin">Mínima:</label>
+            <span id="tempMin"></span>
+            <br>
+            
+            <label for="humidity">Humidade:</label>
+            <span id="humidity"></span>
+            <br>
+
+            <span id="img-descripition"></span>
+            <span id="descripition"></span>
+
+            <div id="moreInformation">
+                <h3>Mais informações sobre o País onde se localiza a cidade:</h3>
+
+                <label for="nameCountry">Nome do Páis onde a cidade se localiza:</label>
+                <span id="nameCountry"></span>
+                <br>
+
+                <label for="continent">Continente onde se localiza o País:</label>
+                <span id="continent"></span>
+                <br>
+
+                <label for="population">População Atual do País:</label>
+                <span id="population"></span>
+                <br>
+
+                <label for="capital">Capital do País:</label>
+                <span id="capital"></span>   
+            </div>
+        </div>
+    </main>
+
+    <script src="./src/index.js"></script>
+</body>
+</html>
