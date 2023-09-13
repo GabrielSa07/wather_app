@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    background-image: url(./images/imagemDeFundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    background-color: aliceblue;
+}
+#img-lupa {
+    width: 25px;
+}

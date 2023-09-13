@@ -8,10 +8,7 @@ const spanTempMin = document.querySelector("#tempMin");
 const spanHumidity = document.querySelector("#humidity");
 const spanimgDescription = document.querySelector("#img-descripition");
 const spanDescription = document.querySelector("#descripition");
-const spanNameCountry = document.querySelector("#nameCountry");
-const spanTContinent = document.querySelector("#continent");
-const spanPopulation = document.querySelector("#population");
-const spanCapital = document.querySelector("#capital");
+
 
 const apiweatherKey = "8fba19d8ddc947edbbe37b443a5bda45";
 // API OpenWeather (climate)
@@ -38,26 +35,26 @@ button.addEventListener("click", async (ev) => {
   ev.preventDefault;
   const city = inputSearch.value;
   const responseWeather = await getInformation(city);
-  const  responseCountry = await getFlagCountry("BR")
+  // const  responseCountry = await getFlagCountry("BR")
   console.log(responseWeather);
 
   const h3NameCity = document.createElement("h3");
   h3NameCity.innerText = `${responseWeather.name}`;
 
-  const imgFlagCountry = document.createElement("img");
-  imgFlagCountry.src = `${responseCountry}`
+  // const imgFlagCountry = document.createElement("img");
+  // imgFlagCountry.src = `${responseCountry}`
 
   const pTemp = document.createElement("p");
-  pTemp.innerText = `${Math.round(responseWeather.main.temp)}`;
+  pTemp.innerText = `Temperatura: ${Math.round(responseWeather.main.temp)}`;
 
   const pTempMax = document.createElement("p");
-  pTempMax.innerText = `${Math.round(responseWeather.main.temp_max)}`;
+  pTempMax.innerText = `Máxima:${Math.round(responseWeather.main.temp_max)}`;
 
   const pTempMin = document.createElement("p");
-  pTempMin.innerText = `${Math.round(responseWeather.main.temp_min)}`;
+  pTempMin.innerText = `Mínima:${Math.round(responseWeather.main.temp_min)}`;
 
   const pHumidity = document.createElement("p");
-  pHumidity.innerText = `${Math.round(responseWeather.main.humidity)}%`;
+  pHumidity.innerText = `Humidade:${Math.round(responseWeather.main.humidity)}%`;
 
   const imgDescription = document.createElement("img");
   imgDescription.src = `https://openweathermap.org/img/wn/${responseWeather.weather[0].icon}.png`;
